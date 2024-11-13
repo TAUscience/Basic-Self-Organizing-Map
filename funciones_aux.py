@@ -27,8 +27,8 @@ def vecindad(cuadricula, ganador, radio_vecindad):
     for i in range(filas):
         for j in range(columnas):
             distancia = np.sqrt((i - ganador[0])**2 + (j - ganador[1])**2)
-        if distancia <= radio_vecindad:
-            vecindad[i, j] = np.exp(-(distancia**2) / (2 * radio_vecindad**2))
+            if distancia <= radio_vecindad:
+                vecindad[i, j] = np.exp(-(distancia**2) / (2 * radio_vecindad**2))
 
     return vecindad
 
