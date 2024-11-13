@@ -19,3 +19,7 @@ for iteracion in range(total_iteraciones):
         alpha = faux.tasa_aprendizaje(iteracion, total_iteraciones, alpha_inicial)
         radio_vecindad = radio_inicial * (1 - iteracion / total_iteraciones)
         cuadricula = faux.actualizar_pesos(cuadricula, color_entrada, ganador, alpha, radio_vecindad)
+        
+plt.imshow(cuadricula / 255.0)  # Escalar colores para matplotlib
+plt.title("Cuadrícula SOM Final")
+plt.show()
